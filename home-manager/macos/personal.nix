@@ -5,14 +5,14 @@
 
   home-manager.users.${username} = { pkgs, ... }: {
     home = {
-      username = "mryall";
-      homeDirectory = "/Users/mryall";
+      username = "sra";
+      homeDirectory = "/Users/sra";
     };
 
     programs = {
       git = {
-        userName = "Matthew Ryall";
-        userEmail = "matthew@mexico86.co.uk";
+        userName = "Scott Anderson";
+        userEmail = "sra@diem.net";
       };
       ssh = {
         matchBlocks = {
