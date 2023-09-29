@@ -7,6 +7,10 @@
     configureBuildUsers = true;
   };
 
+  users.users.sra = {
+    name = "sra";
+    home = "/Users/sra";
+  };
   users.users.mryall = {
     name = "mryall";
     home = "/Users/mryall";
@@ -23,7 +27,6 @@
 
     systemPackages = [
       pkgs.alacritty
-      pkgs.ansible
       pkgs.dockutil
     ];
   };

@@ -29,7 +29,7 @@
 
   outputs = { self, nixpkgs, darwin, emacs-overlay, nur, home-manager, deploy-rs, ... }@inputs:
     let
-      machost = { system, host, username ? "mryall" }:
+      machost = { system, host, username ? "sra" }:
         darwin.lib.darwinSystem {
           inherit system;
           modules = [
@@ -49,7 +49,7 @@
             };
           };
         };
-      nixoshost = { system, host, username ? "mryall" }:
+      nixoshost = { system, host, username ? "sra" }:
         nixpkgs.lib.nixosSystem {
           inherit system;
           modules = [
@@ -90,10 +90,10 @@
                   packages = with pkgs; [ terminus_font ];
                   font = nixpkgs.lib.mkDefault "${pkgs.terminus_font}/share/consolefonts/ter-132n.psf.gz";
                 };
-                users.users.mryall = {
+                users.users.sra = {
                   isNormalUser = true;
-                  home = "/home/mryall";
-                  description = "Matthew";
+                  home = "/home/sra";
+                  description = "Scott";
                   extraGroups = [ "wheel" "networkmanager" ];
                   hashedPassword = "";
                 };
@@ -125,6 +125,7 @@
       };
       darwinConfigurations = {
         socrates = machost { system = "x86_64-darwin"; host = "socrates"; };
+        lamb = machost { system = "aarch64-darwin"; host = "lamb"; };
         careca = machost { system = "aarch64-darwin"; host = "careca"; username = "matthew.ryall"; };
         platini = machost { system = "x86_64-darwin"; host = "platini"; };
         robson = machost { system = "x86_64-darwin"; host = "robson"; };
