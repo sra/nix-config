@@ -7,16 +7,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    deploy-rs = {
-      url = "github:serokell/deploy-rs";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    emacs-overlay = {
-      url = "github:nix-community/emacs-overlay/master";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     home-manager = {
       url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -27,21 +17,21 @@
     };
   };
 
-  outputs = { self, nixpkgs, darwin, emacs-overlay, nur, home-manager, deploy-rs, ... }@inputs:
+  outputs = { self, nixpkgs, darwin,  nur, home-manager, ... }@inputs:
     let
       machost = { system, host, username ? "sra" }:
         darwin.lib.darwinSystem {
           inherit system;
           modules = [
-            ./hosts/macos/${host}.nix { nixpkgs.overlays = [ emacs-overlay.overlay ]; }
+            ./hosts/macos/${host}.nix { nixpkgs.overlays = [ ]; }
             home-manager.darwinModules.home-manager
             ./home-manager/macos/${host}.nix
           ];
           specialArgs = {
             inherit username;
             x86pkgs = import nixpkgs {
-              system = "x86_64-darwin";
-              overlays = [ emacs-overlay.overlay ];
+              system = "aarch64-darwin";
+              overlays = [ ];
             };
             nur = import nur {
               pkgs = import nixpkgs { inherit system; };
@@ -60,7 +50,7 @@
           specialArgs = {
             inherit username;
             inherit inputs;
-            pkgs = import nixpkgs { inherit system; overlays = [ emacs-overlay.overlay ]; };
+            pkgs = import nixpkgs { inherit system; overlays = [ ]; };
             nur = import nur {
               pkgs = import nixpkgs { inherit system; };
               nurpkgs = import nixpkgs { inherit system; };
@@ -77,7 +67,7 @@
                 pkgs = nixpkgs.legacyPackages.aarch64-linux;
               in
               {
-                system.stateVersion = "22.05";
+                system.stateVersion = "23.05";
                 nixpkgs = {
                   buildPlatform.system = "x86_64-linux";
                   hostPlatform.system = "aarch64-linux";
@@ -119,25 +109,17 @@
             };
           }) [ "x86_64-darwin" "x86_64-linux" "aarch64-darwin" ]);
       nixosConfigurations = {
-        sanchez = nixoshost { system = "x86_64-linux"; host = "sanchez"; };
-        rossi = nixoshost { system = "x86_64-linux"; host = "rossi"; };
-        rpi = rpihost { host = "test"; };
+        #sanchez = nixoshost { system = "x86_64-linux"; host = "sanchez"; };
+        #rossi = nixoshost { system = "x86_64-linux"; host = "rossi"; };
+        #rpi = rpihost { host = "test"; };
       };
       darwinConfigurations = {
-        socrates = machost { system = "x86_64-darwin"; host = "socrates"; };
         lamb = machost { system = "aarch64-darwin"; host = "lamb"; };
-        careca = machost { system = "aarch64-darwin"; host = "careca"; username = "matthew.ryall"; };
-        platini = machost { system = "x86_64-darwin"; host = "platini"; };
-        robson = machost { system = "x86_64-darwin"; host = "robson"; };
+        #socrates = machost { system = "x86_64-darwin"; host = "socrates"; };
+        #careca = machost { system = "aarch64-darwin"; host = "careca"; username = "matthew.ryall"; };
+        #platini = machost { system = "x86_64-darwin"; host = "platini"; };
+        #robson = machost { system = "x86_64-darwin"; host = "robson"; };
       };
 
-      deploy.nodes.host.profiles.system = {
-        user = "root";
-        hostname = "129.151.93.130";
-        path = deploy-rs.lib.x86_64-linux.activate.nixos self.nixosConfigurations.host;
-      };
-
-      # This is highly advised, and will prevent many possible mistakes
-      checks = builtins.mapAttrs (system: deployLib: deployLib.deployChecks self.deploy) deploy-rs.lib;
     };
 }

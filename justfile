@@ -1,4 +1,4 @@
-macosNix := "${HOME}/Config/nix-config"
+macosNix := "${HOME}/nix-config"
 nixosNix := "/etc/nixos"
 
 [macos]

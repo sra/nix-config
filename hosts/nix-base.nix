@@ -2,17 +2,17 @@
 
 {
 
-  imports = [ ../modules/emacs ../cachix.nix ];
+  imports = [ ../cachix.nix ];
 
   # Set your time zone.
-  time = { timeZone = "Europe/London"; };
+  time = { timeZone = "America/New_York"; };
 
   nix = {
     package = pkgs.nixUnstable;
     extraOptions = ''
       experimental-features = nix-command flakes
-      extra-platforms = x86_64-darwin aarch64-darwin
-      trusted-users = root mryall
+      extra-platforms = aarch64-darwin
+      trusted-users = root sra
     '';
   };
 
@@ -22,7 +22,7 @@
 
   environment = {
     systemPackages = with pkgs; [
-      vim
+      neovim
       tailscale
       cachix
       python3
@@ -39,6 +39,5 @@
 
   programs = {
     zsh = { enable = true; };
-    emacsWithMJRPackages = { enable = true; };
   };
 }
