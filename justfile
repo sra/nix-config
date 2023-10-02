@@ -37,3 +37,8 @@ create-public-key:
 install-ff-native-messaging:
     rm -f ${HOME}/Library/Application\ Support/Mozilla/NativeMessagingHosts/*
     ln -s ${HOME}/.nix-profile/lib/mozilla/native-messaging-hosts/* ${HOME}/Library/Application\ Support/Mozilla/NativeMessagingHosts/
+[macos]
+install:
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    nix-build https://github.com/LnL7/nix-darwin/archive/master.tar.gz -A installer
+    ./result/bin/darwin-installer
