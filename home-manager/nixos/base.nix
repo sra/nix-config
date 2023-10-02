@@ -3,10 +3,10 @@
 {
   imports = [ ../base.nix ];
 
-  home-manager.users.mryall = { pkgs, ... }: {
+  home-manager.users.sra = { pkgs, ... }: {
     home = {
-      username = "mryall";
-      homeDirectory = "/home/mryall";
+      username = "sra";
+      homeDirectory = "/home/sra";
       stateVersion = "22.05";
 
       packages = with pkgs; [

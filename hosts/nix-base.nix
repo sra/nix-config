@@ -26,14 +26,19 @@
       tailscale
       cachix
       python3
+      ripgrep
+      fd
+      gitui
+      
     ];
     pathsToLink = [ "/share/zsh" ];
   };
 
-  fonts.packages = with pkgs; [
+  fonts.fonts = with pkgs; [
     dejavu_fonts
     iosevka
     fira-code
+    hack-font
     font-awesome
   ];
 

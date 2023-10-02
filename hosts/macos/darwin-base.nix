@@ -11,14 +11,10 @@
     name = "sra";
     home = "/Users/sra";
   };
-  users.users.mryall = {
-    name = "mryall";
-    home = "/Users/mryall";
-  };
 
-  users.users."matthew.ryall" = {
-    name = "matthew.ryall";
-    home = "/Users/matthew.ryall";
+  users.users."scott.anderson" = {
+    name = "scott.anderson";
+    home = "/Users/scott.anderson";
   };
 
   environment = {
@@ -53,6 +49,12 @@
       NSGlobalDomain = {
         # Trackpad variables
         "com.apple.swipescrolldirection" = false;
+      };
+      finder = {
+        FXDefaultSearchScope = "SCcf"; # current folder
+        FXPreferredViewStyle = "Nlsv";
+        ShowPathbar = true;
+        ShowStatusBar = true;
       };
       dock = {
         mru-spaces = false;

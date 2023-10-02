@@ -43,12 +43,12 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users = {
     groups = {
-      mryall = { gid = 1000; };
+      sra = { gid = 1000; };
     };
     users = {
-      mryall = {
+      sra = {
         isNormalUser = true;
-        extraGroups = [ "wheel" "audio" "docker" "mryall" ];
+        extraGroups = [ "wheel" "audio" "docker" "sra" ];
         shell = pkgs.zsh;
         openssh = {
           authorizedKeys = {

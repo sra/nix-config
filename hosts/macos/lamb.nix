@@ -27,6 +27,8 @@
 
     casks = [
       "firefox"
+      "alfred"
+      "jetbrains-toolbox"
     ];
   };
 

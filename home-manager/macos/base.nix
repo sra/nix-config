@@ -1,14 +1,15 @@
 { pkgs, username, ... }:
 
 {
-  imports = [ ../base.nix ./emacs-protocol-handler.nix ];
+  imports = [ ../base.nix ];
 
   home-manager.users.${username} = { pkgs, ... }: {
     home = {
       packages = with pkgs; [
-        chroma
-        passff-host
-        tridactyl-native
+        #chroma
+        #passff-host
+        #tridactyl-native
+        slack
       ];
     };
 
@@ -21,7 +22,7 @@
       firefox = {
         package = pkgs.runCommand "firefox-0.0.0" { } "mkdir $out";
         profiles = {
-          mryall = {
+          sra = {
             userChrome = ''
               #TabsToolbar { visibility: collapse !important; }
 

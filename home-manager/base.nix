@@ -16,8 +16,8 @@ in
         aspellEnv
         bottom
         difftastic
-        dogdns
-        duf
+        #dogdns
+        #duf
         fd
         just
         # slack
@@ -25,18 +25,19 @@ in
         ncdu
         nixpkgs-fmt
         rnix-lsp
-        soco-cli
-        sqlite
+        #soco-cli
+        #sqlite
         # weechat
+        yq
       ];
-      sessionVariables = { EDITOR = "emacsclient"; };
+      sessionVariables = { EDITOR = "nvim"; };
 
       file = {
         ".aspell.conf".text = "data-dir ${aspellEnv}/lib/aspell";
-        tridactyl = {
-          source = ./files/tridactyl_emacs_bindings;
-          target = ".config/firefox/tridactyl_emacs_bindings";
-        };
+        #tridactyl = {
+          #source = ./files/tridactyl_emacs_bindings;
+          #target = ".config/firefox/tridactyl_emacs_bindings";
+        #};
       };
     };
 
@@ -67,7 +68,7 @@ in
         };
         extraConfig = {
           core = {
-            editor = "${pkgs.emacs}/bin/emacsclient";
+            #editor = "${pkgs.emacs}/bin/emacsclient";
             whitespace = "nowarn";
           };
           color = {
@@ -113,7 +114,7 @@ in
       firefox = {
         enable = true;
         profiles = {
-          mryall = {
+          sra = {
             id = 0;
             settings = {
               "browser.urlbar.placeholderName" = "DuckDuckGo";
@@ -136,7 +137,7 @@ in
         enable = true;
         enableCompletion = true;
         enableAutosuggestions = true;
-        defaultKeymap = "emacs";
+        #defaultKeymap = "vicmd";
         history = { ignoreDups = true; };
         plugins = [{
           name = "fast-syntax-highlighting";
