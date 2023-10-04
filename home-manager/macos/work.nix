@@ -18,7 +18,6 @@ in
         jwt-cli
         jira-cli-go
         pgformatter
-        azure-cli
         kubectl
         kubelogin
         k9s
