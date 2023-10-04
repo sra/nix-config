@@ -12,9 +12,9 @@
     home = "/Users/sra";
   };
 
-  users.users."scott.anderson" = {
-    name = "scott.anderson";
-    home = "/Users/scott.anderson";
+  users.users."scottanderson" = {
+    name = "scottanderson";
+    home = "/Users/scottanderson";
   };
 
   environment = {

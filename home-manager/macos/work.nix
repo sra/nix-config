@@ -8,8 +8,8 @@ in
 
   home-manager.users.${username} = { pkgs, ... }: {
     home = {
-      username = "scott.anderson";
-      homeDirectory = "/Users/scott.anderson";
+      username = "scottanderson";
+      homeDirectory = "/Users/scottanderson";
 
       packages = with pkgs; [
         # adr-tools

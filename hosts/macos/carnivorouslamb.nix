@@ -16,6 +16,7 @@
     };
   };
 
+
   homebrew = {
     taps = [
       "homebrew/services"
@@ -29,6 +30,10 @@
       "firefox"
       "alfred"
       "jetbrains-toolbox"
+      "orbstack"
+      "setapp"
+      "1password"
+      "1password-cli"
     ];
   };
 

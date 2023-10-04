@@ -115,7 +115,7 @@
       };
       darwinConfigurations = {
         lamb = machost { system = "aarch64-darwin"; host = "lamb"; };
-        carnivorouslamb = machost { system = "aarch64-darwin"; host = "carnivorouslamb"; username = "scott.anderson";};
+        carnivorouslamb = machost { system = "aarch64-darwin"; host = "carnivorouslamb"; username = "scottanderson";};
         #socrates = machost { system = "x86_64-darwin"; host = "socrates"; };
         #careca = machost { system = "aarch64-darwin"; host = "careca"; username = "matthew.ryall"; };
         #platini = machost { system = "x86_64-darwin"; host = "platini"; };
