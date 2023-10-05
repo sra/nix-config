@@ -188,7 +188,7 @@ in
             pane_frames = { rounded_corners = true; };
           };
           keybinds = {
-            unbind = [ "Ctrl g" "Ctrl p" "Ctrl n" "Ctrl b" ];
+            #unbind = [ "Ctrl g" "Ctrl p" "Ctrl n" "Ctrl b" ];
           };
         };
       };

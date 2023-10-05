@@ -29,7 +29,7 @@
       ripgrep
       fd
       gitui
-      
+      rclone
     ];
     pathsToLink = [ "/share/zsh" ];
   };

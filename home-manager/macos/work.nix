@@ -24,6 +24,12 @@ in
         ssm-session-manager-plugin
         tidyp
         xh
+        aws-vault
+        awscli2
+        eksctl
+        aws-iam-authenticator
+	jdk17
+        maven
       ];
 
       sessionVariables = {

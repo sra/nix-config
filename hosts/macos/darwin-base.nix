@@ -24,6 +24,9 @@
     systemPackages = [
       pkgs.alacritty
       pkgs.dockutil
+      pkgs.vscode
+      pkgs.boundary
+      #pkgs.logseq
     ];
   };
 
@@ -98,7 +101,7 @@
     };
     caskArgs = {
       appdir = "~/Applications/Homebrew Apps";
-      require_sha = true;
+      require_sha = false;
     };
   };
 }

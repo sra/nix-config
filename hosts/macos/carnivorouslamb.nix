@@ -34,6 +34,8 @@
       "setapp"
       "1password"
       "1password-cli"
+      "google-drive"
+      "logseq"
     ];
   };
 
