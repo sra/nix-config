@@ -45,12 +45,14 @@ in
         controlPath = "/tmp/%r@%h:%p";
         serverAliveInterval = 20;
         serverAliveCountMax = 2;
+        extraConfig = ''
+          IdentityAgent ~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
+        '';
 
         matchBlocks = {
-          "github.com" = {
+          "xgithub.com" = {
             hostname = "github.com";
             user = "git";
-            identityFile = "/Volumes/Q/k/id_rsa_moj";
             identitiesOnly = true;
           };
         };
