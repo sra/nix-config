@@ -88,6 +88,7 @@ in
             };
           };
           pager = { difftool = true; };
+          branch = { autoSetupMerge = true; };
         };
       };
 
@@ -143,6 +144,9 @@ in
           name = "fast-syntax-highlighting";
           src = "${pkgs.zsh-fast-syntax-highlighting}/share/zsh/site-functions";
         }];
+        shellAliases = {
+          k = "kubectl";
+        };
         prezto = {
           enable = true;
           color = true;

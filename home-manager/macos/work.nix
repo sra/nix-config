@@ -27,6 +27,7 @@ in
         aws-vault
         awscli2
         eksctl
+        devbox
         aws-iam-authenticator
 	jdk17
         maven

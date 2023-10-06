@@ -26,7 +26,7 @@
       pkgs.dockutil
       pkgs.vscode
       pkgs.boundary
-      #pkgs.logseq
+      pkgs.earthly
     ];
   };
 

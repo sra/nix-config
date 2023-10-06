@@ -36,6 +36,7 @@
       "1password-cli"
       "google-drive"
       "logseq"
+      "tailscale"
     ];
   };
 
