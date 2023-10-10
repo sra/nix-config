@@ -18,6 +18,7 @@ in
         difftastic
         #dogdns
         #duf
+        eza
         fd
         just
         # slack
@@ -146,6 +147,7 @@ in
         }];
         shellAliases = {
           k = "kubectl";
+          ls = "eza --icons --git";
         };
         prezto = {
           enable = true;
@@ -204,7 +206,7 @@ in
           env = { TERM = "xterm-256color"; };
           font = {
             normal = {
-              family = "Iosevka";
+              family = "Iosevka Nerd Font";
             };
           };
           window = {
