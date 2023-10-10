@@ -37,6 +37,7 @@
       "google-drive"
       "logseq"
       "tailscale"
+      "logi-options-plus"
     ];
   };
 

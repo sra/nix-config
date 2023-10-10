@@ -187,7 +187,8 @@ in
         enable = true;
         enableZshIntegration = true;
         settings = {
-          theme = "solarized-dark";
+          #theme = "solarized-dark";
+          theme = "gruvbox-dark";
           ui = {
             pane_frames = { rounded_corners = true; };
           };
@@ -207,7 +208,7 @@ in
             };
           };
           window = {
-            decorations = "none";
+            #decorations = "none";
             option_as_alt = "OnlyLeft";
           };
           mouse_bindings = [
