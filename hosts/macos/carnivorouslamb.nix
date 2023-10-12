@@ -24,6 +24,7 @@
 
     brews = [
       # "syncthing"
+      "teller"
     ];
 
     casks = [
@@ -36,8 +37,9 @@
       "1password-cli"
       "google-drive"
       "logseq"
-      "tailscale"
       "logi-options-plus"
+      "spotify"
+       "tailscale"
     ];
   };
 

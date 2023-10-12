@@ -15,8 +15,8 @@ in
         # adr-tools
         #dbeaver
         # jetbrains.idea-community
-        jwt-cli
-        jira-cli-go
+        #jwt-cli
+        #jira-cli-go
         pgformatter
         kubectl
         kubelogin
@@ -26,11 +26,8 @@ in
         xh
         aws-vault
         awscli2
-        eksctl
         devbox
         aws-iam-authenticator
-	jdk17
-        maven
       ];
 
       sessionVariables = {
@@ -54,6 +51,9 @@ in
           "xgithub.com" = {
             hostname = "github.com";
             user = "git";
+          };
+          "ts-gw1" = { 
+            user = "ec2-user";
           };
           "win01-e1" = { # meh
             hostname = "34.198.105.85";

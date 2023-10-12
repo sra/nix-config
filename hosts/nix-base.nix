@@ -23,7 +23,7 @@
   environment = {
     systemPackages = with pkgs; [
       neovim
-      tailscale
+      #tailscale
       cachix
       python3
       ripgrep

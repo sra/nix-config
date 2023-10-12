@@ -25,8 +25,9 @@
       pkgs.alacritty
       pkgs.dockutil
       pkgs.vscode
-      pkgs.boundary
-      pkgs.earthly
+      #pkgs.spotify
+      #pkgs.boundary
+      #pkgs.earthly
     ];
   };
 
@@ -51,7 +52,7 @@
     defaults = {
       NSGlobalDomain = {
         # Trackpad variables
-        "com.apple.swipescrolldirection" = false;
+        "com.apple.swipescrolldirection" = true;
       };
       finder = {
         FXDefaultSearchScope = "SCcf"; # current folder
@@ -75,9 +76,9 @@
       '';
     };
     nix-daemon = { enable = true; };
-    tailscale = {
-      enable = true;
-    };
+    #tailscale = {
+      #enable = true;
+    #};
   };
 
   networking = {

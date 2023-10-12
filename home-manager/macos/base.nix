@@ -6,9 +6,6 @@
   home-manager.users.${username} = { pkgs, ... }: {
     home = {
       packages = with pkgs; [
-        #chroma
-        #passff-host
-        #tridactyl-native
         slack
       ];
     };

@@ -31,7 +31,9 @@ in
         # weechat
         yq
       ];
-      sessionVariables = { EDITOR = "nvim"; };
+      sessionVariables = { 
+        EDITOR = "nvim";
+      };
 
       file = {
         ".aspell.conf".text = "data-dir ${aspellEnv}/lib/aspell";
@@ -44,6 +46,11 @@ in
 
     programs = {
       home-manager = { enable = true; };
+      neovim = {
+        enable = true;
+        viAlias = true;
+        vimAlias = true;
+      };
 
       ssh = {
         enable = true;
@@ -148,6 +155,7 @@ in
         shellAliases = {
           k = "kubectl";
           ls = "eza --icons --git";
+          
         };
         prezto = {
           enable = true;
