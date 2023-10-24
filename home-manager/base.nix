@@ -1,6 +1,6 @@
 { pkgs, nur, username, ... }:
 let
-  aspellEnv = pkgs.aspellWithDicts (d: [ d.en ]);
+  foo = "bar";
 in
 {
   home-manager.users.${username} = { pkgs, ... }: {
@@ -13,35 +13,19 @@ in
       stateVersion = "22.05";
 
       packages = with pkgs; [
-        aspellEnv
-        bottom
         difftastic
-        #dogdns
-        #duf
         eza
         fd
         just
-        # slack
-        # isync
         ncdu
         nixpkgs-fmt
         rnix-lsp
-        #soco-cli
-        #sqlite
-        # weechat
         yq
       ];
       sessionVariables = { 
         EDITOR = "nvim";
       };
 
-      file = {
-        ".aspell.conf".text = "data-dir ${aspellEnv}/lib/aspell";
-        #tridactyl = {
-          #source = ./files/tridactyl_emacs_bindings;
-          #target = ".config/firefox/tridactyl_emacs_bindings";
-        #};
-      };
     };
 
     programs = {
@@ -50,6 +34,29 @@ in
         enable = true;
         viAlias = true;
         vimAlias = true;
+	plugins = with pkgs.vimPlugins; [
+	  ale
+	  fzf-vim
+	  lightline-vim
+	  neoformat
+	  splitjoin-vim
+	  supertab
+	  tabular
+	  ultisnips
+	  vim-abolish
+	  vim-commentary
+	  vim-endwise
+	  vim-eunuch
+	  vim-fugitive
+	  vim-gruvbox8
+	  vim-mundo
+	  vim-polyglot
+	  vim-repeat
+	  vim-surround
+	  vim-test
+	  vim-unimpaired
+	  vim-visualstar
+	];
       };
 
       ssh = {
@@ -76,7 +83,6 @@ in
         };
         extraConfig = {
           core = {
-            #editor = "${pkgs.emacs}/bin/emacsclient";
             whitespace = "nowarn";
           };
           color = {
@@ -87,7 +93,7 @@ in
 
           push = { default = "simple"; };
           pull = { ff = "only"; };
-          github = { user = "mxco86"; };
+          github = { user = "sra"; };
           diff = { tool = "difftastic"; };
           difftool = { prompt = false; };
           difftool = {
@@ -155,7 +161,7 @@ in
         shellAliases = {
           k = "kubectl";
           ls = "eza --icons --git";
-          
+          ns = "nix-shell";
         };
         prezto = {
           enable = true;
@@ -194,7 +200,7 @@ in
       };
 
       zellij = {
-        enable = true;
+        enable = false;
         enableZshIntegration = true;
         settings = {
           #theme = "solarized-dark";
@@ -209,7 +215,7 @@ in
       };
 
       alacritty = {
-        enable = true;
+        enable = false;
         settings = {
           env = { TERM = "xterm-256color"; };
           font = {
@@ -265,10 +271,10 @@ in
         };
       };
 
-      dircolors = {
-        enable = true;
-        enableZshIntegration = true;
-      };
+      #dircolors = {
+        #enable = true;
+        #enableZshIntegration = true;
+      #};
     };
   };
 }

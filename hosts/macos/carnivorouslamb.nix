@@ -25,11 +25,12 @@
     brews = [
       # "syncthing"
       "teller"
+      "llm"
+      "ollama"
     ];
 
     casks = [
       "firefox"
-      "alfred"
       "jetbrains-toolbox"
       "orbstack"
       "setapp"
@@ -39,7 +40,10 @@
       "logseq"
       "logi-options-plus"
       "spotify"
-       "tailscale"
+      "tailscale"
+      "iterm2"
+      "slack-cli"
+      "raycast"
     ];
   };
 
