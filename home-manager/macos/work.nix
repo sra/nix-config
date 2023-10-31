@@ -55,6 +55,9 @@ in
           "ts-gw1" = { 
             user = "ec2-user";
           };
+          "ts-gw-tl1" = { 
+            user = "ec2-user";
+          };
           "win01-e1" = { # meh
             hostname = "34.198.105.85";
             user = "root";

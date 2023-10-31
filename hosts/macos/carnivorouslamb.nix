@@ -31,6 +31,7 @@
 
     casks = [
       "firefox"
+      "brave-browser"
       "jetbrains-toolbox"
       "orbstack"
       "setapp"
@@ -44,15 +45,15 @@
       "iterm2"
       "slack-cli"
       "raycast"
+      "via"
+      "whisky"
     ];
   };
 
   services = {
     skhd = {
       skhdConfig = ''
-        ralt - 1: open /run/current-system/Applications/Alacritty.app
-        ralt - 2: open /run/current-system/Applications/Emacs.app
-        ralt - 3: open -a ~/Applications/Homebrew\ Apps/Firefox.app
+        lalt - 1: open -a ~/Applications/Homebrew\ Apps/Firefox.app
       '';
     };
   };

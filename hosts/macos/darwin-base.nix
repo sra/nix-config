@@ -22,7 +22,6 @@
     loginShell = "${pkgs.zsh}";
 
     systemPackages = [
-      #pkgs.alacritty
       pkgs.dockutil
       pkgs.vscode
       #pkgs.spotify
