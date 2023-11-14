@@ -40,6 +40,7 @@
       "google-drive"
       "logseq"
       "logi-options-plus"
+      "reflect"
       "spotify"
       "tailscale"
       "iterm2"
@@ -47,6 +48,7 @@
       "raycast"
       "via"
       "whisky"
+      "drata-agent"
     ];
   };
 
