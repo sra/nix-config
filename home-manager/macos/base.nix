@@ -14,6 +14,7 @@
       git = {
         extraConfig = {
           credential = { helper = "osxkeychain"; };
+          branch = { autosetupmerge = true; };
         };
       };
       firefox = {
