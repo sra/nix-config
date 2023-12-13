@@ -49,6 +49,7 @@
       "whisky"
       "drata-agent"
       "cursor"
+      #"lm-studio" # hash mismatch
     ];
   };
 

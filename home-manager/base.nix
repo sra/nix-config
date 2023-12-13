@@ -162,6 +162,7 @@ in
           k = "kubectl";
           ls = "eza --icons --git";
           ns = "nix-shell";
+          t = "/Applications/Tailscale.app/Contents/MacOS/Tailscale";
         };
         prezto = {
           enable = true;

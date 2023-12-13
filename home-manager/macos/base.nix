@@ -15,6 +15,7 @@
         extraConfig = {
           credential = { helper = "osxkeychain"; };
           branch = { autosetupmerge = true; };
+          push = { autosetupremote = true; };
         };
       };
       firefox = {
