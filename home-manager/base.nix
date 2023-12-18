@@ -180,6 +180,7 @@ in
         initExtra = ''
           bindkey "\e[1;3D" backward-word
           bindkey "\e[1;3C" forward-word
+          function nx() { nix-shell -p "$1" --run "$1" }
         '';
       };
 
