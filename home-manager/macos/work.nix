@@ -66,6 +66,10 @@ in
             hostname = "34.198.249.102";
             user = "root";
           };
+          "motion" = {
+            hostname = "3.210.212.36";
+            user = "centos";
+          };
           "axis01-e1" = {
             hostname = "34.200.22.53";
             user = "root";

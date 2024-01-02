@@ -23,6 +23,7 @@
   environment = {
     systemPackages = with pkgs; [
       neovim
+      atuin
       #tailscale
       cachix
       python3

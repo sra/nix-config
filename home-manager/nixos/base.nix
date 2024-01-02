@@ -129,6 +129,7 @@
     };
 
     services = {
+      atuin.enable = true;
       syncthing = { enable = true; };
       mako = {
         enable = true;

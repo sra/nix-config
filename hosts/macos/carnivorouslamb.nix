@@ -30,7 +30,9 @@
     ];
 
     casks = [
+      "lunarvim"
       "firefox"
+      "vivaldi"
       "brave-browser"
       "jetbrains-toolbox"
       "orbstack"
