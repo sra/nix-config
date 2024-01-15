@@ -84,6 +84,7 @@ in
         extraConfig = {
           core = {
             whitespace = "nowarn";
+            editor = "nvim";
           };
           color = {
             branch = "auto";

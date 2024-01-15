@@ -27,10 +27,12 @@
       "teller"
       "llm"
       "ollama"
+      "ansible"
     ];
 
     casks = [
-      "lunarvim"
+      #"lunarvim"
+      "betterdisplay"
       "firefox"
       "vivaldi"
       "brave-browser"
