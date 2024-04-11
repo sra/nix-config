@@ -19,7 +19,6 @@ in
         just
         ncdu
         nixpkgs-fmt
-        rnix-lsp
         yq
       ];
       sessionVariables = { 
@@ -164,6 +163,7 @@ in
           ls = "eza --icons --git";
           ns = "nix-shell";
           t = "/Applications/Tailscale.app/Contents/MacOS/Tailscale";
+          tel= "aws-vault exec tl-dev -- teller";
         };
         prezto = {
           enable = true;
@@ -182,6 +182,7 @@ in
           bindkey "\e[1;3D" backward-word
           bindkey "\e[1;3C" forward-word
           function nx() { nix-shell -p "$1" --run "$1" }
+          export BAT_THEME=gruvbox-dark
         '';
       };
 

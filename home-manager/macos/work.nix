@@ -28,6 +28,7 @@ in
         awscli2
         devbox
         aws-iam-authenticator
+        pv
       ];
 
       sessionVariables = {
@@ -69,6 +70,10 @@ in
           "motion" = {
             hostname = "3.210.212.36";
             user = "centos";
+          };
+          "ftpmotion" = {
+            hostname = "3.228.82.208";
+            user = "ec2-user";
           };
           "axis01-e1" = {
             hostname = "34.200.22.53";
@@ -120,6 +125,10 @@ in
           };
           "stream08-e1" = {
             hostname = "18.211.43.147";
+            user = "root";
+          };
+          "stream10-e1" = {
+            hostname = "54.86.151.173";
             user = "root";
           };
           "stream99-e1" = {

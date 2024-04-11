@@ -37,7 +37,7 @@
 
   fonts.fonts = with pkgs; [
     dejavu_fonts
-    nerdfonts
+    nerdfonts#3.1.1
     #iosevka-nerdfont
     #fira-code-nerdfont
     #hack-font

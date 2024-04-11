@@ -7,6 +7,5 @@ mkShell {
     nix-linter
     nixfmt
     nixpkgs-fmt
-    rnix-lsp
   ];
 }

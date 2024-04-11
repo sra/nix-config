@@ -98,7 +98,6 @@
           pkglist = pkgs: [
             pkgs.nixfmt
             pkgs.nixpkgs-fmt
-            pkgs.rnix-lsp
           ];
         in
         inputs.nixpkgs.lib.listToAttrs (map

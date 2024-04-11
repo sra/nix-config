@@ -20,6 +20,8 @@
   homebrew = {
     taps = [
       "homebrew/services"
+      "triggermesh/cli"
+      "metalbear-co/mirrord"
     ];
 
     brews = [
@@ -28,6 +30,14 @@
       "llm"
       "ollama"
       "ansible"
+      "mesheryctl"
+      "tmctl"
+      "logcli"
+      "kamel"
+      "mirrord"
+      "eksctl"
+      "ykman"
+      "temporal"
     ];
 
     casks = [
@@ -53,6 +63,8 @@
       "whisky"
       "drata-agent"
       "cursor"
+      "zed"
+      "keepassxc"
       #"lm-studio" # hash mismatch
     ];
   };
