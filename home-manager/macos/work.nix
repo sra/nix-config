@@ -71,8 +71,7 @@ in
             hostname = "3.210.212.36";
             user = "centos";
           };
-          "ftpmotion" = {
-            hostname = "3.228.82.208";
+          "ftp-motion-proxy" = {
             user = "ec2-user";
           };
           "axis01-e1" = {
@@ -92,48 +91,20 @@ in
             user = "root";
           };
           "sdc01-e1" = {
-            hostname = "184.72.241.143";
+            hostname = "3.235.58.140";
             user = "centos";
           };
-          "stream01-e1" = {
-            hostname = "52.203.82.192";
-            user = "root";
+          "stream*-e1" = {
+            user = "ec2-user";
           };
-          "stream02-e1" = {
-            hostname = "34.198.168.154";
-            user = "root";
+          "stream01-e1-old" = {
+            user = "centos";
           };
-          "stream03-e1" = {
-            hostname = "35.170.111.35";
-            user = "root";
+          "stream02-e1-old" = {
+            user = "centos";
           };
-          "stream04-e1" = {
-            hostname = "34.204.121.19";
-            user = "root";
-          };
-          "stream05-e1" = {
-            hostname = "3.220.227.249";
-            user = "root";
-          };
-          "stream06-e1" = {
-            hostname = "3.218.42.217";
-            user = "root";
-          };
-          "stream07-e1" = {
-            hostname = "54.156.7.208";
-            user = "root";
-          };
-          "stream08-e1" = {
-            hostname = "18.211.43.147";
-            user = "root";
-          };
-          "stream10-e1" = {
-            hostname = "54.86.151.173";
-            user = "root";
-          };
-          "stream99-e1" = {
-            hostname = "54.226.104.69";
-            user = "root";
+          "stream03-e1-old" = {
+            user = "centos";
           };
         };
       };

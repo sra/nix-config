@@ -38,6 +38,7 @@
       "eksctl"
       "ykman"
       "temporal"
+      "kubeshark"
     ];
 
     casks = [
@@ -65,7 +66,7 @@
       "cursor"
       "zed"
       "keepassxc"
-      #"lm-studio" # hash mismatch
+      "lm-studio" # hash mismatch
     ];
   };
 

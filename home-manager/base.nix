@@ -151,7 +151,7 @@ in
       zsh = {
         enable = true;
         enableCompletion = true;
-        enableAutosuggestions = true;
+        autosuggestion.enable = true;
         #defaultKeymap = "vicmd";
         history = { ignoreDups = true; };
         plugins = [{
