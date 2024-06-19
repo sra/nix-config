@@ -183,6 +183,7 @@ in
           bindkey "\e[1;3C" forward-word
           function nx() { nix-shell -p "$1" --run "$1" }
           export BAT_THEME=gruvbox-dark
+          export PATH=$PATH:~/.local/bin
         '';
       };
 

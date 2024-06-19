@@ -24,13 +24,16 @@
     systemPackages = with pkgs; [
       neovim
       atuin
-      #tailscale
       cachix
-      python3
       ripgrep
       fd
       gitui
       rclone
+      #python3
+      #(python3.withPackages (ps: with ps; [
+        #pandas
+      #]))
+
     ];
     pathsToLink = [ "/share/zsh" ];
   };

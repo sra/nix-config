@@ -19,6 +19,7 @@ in
         #jira-cli-go
         pgformatter
         kubectl
+        kubernetes-helm
         kubelogin
         k9s
         ssm-session-manager-plugin

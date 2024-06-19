@@ -5,6 +5,7 @@ let
     pip
     pylint
     virtualenv
+    shell_gpt
   ]);
 in
 pkgs.mkShell rec {

@@ -24,6 +24,7 @@
     systemPackages = [
       pkgs.dockutil
       pkgs.vscode
+      pkgs.tmux
       #pkgs.spotify
       #pkgs.boundary
       #pkgs.earthly
