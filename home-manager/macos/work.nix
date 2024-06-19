@@ -12,24 +12,19 @@ in
       homeDirectory = "/Users/scottanderson";
 
       packages = with pkgs; [
-        # adr-tools
-        #dbeaver
-        # jetbrains.idea-community
-        #jwt-cli
-        #jira-cli-go
-        pgformatter
-        kubectl
-        kubernetes-helm
-        kubelogin
-        k9s
-        ssm-session-manager-plugin
-        tidyp
-        xh
+        aws-iam-authenticator
         aws-vault
         awscli2
         devbox
-        aws-iam-authenticator
+        k9s
+        kubectl
+        kubelogin
+        kubernetes-helm
+        pgformatter
         pv
+        ssm-session-manager-plugin
+        tidyp
+        xh
       ];
 
       sessionVariables = {
