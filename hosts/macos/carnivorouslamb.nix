@@ -22,20 +22,27 @@
       "homebrew/services"
       "triggermesh/cli"
       "metalbear-co/mirrord"
+      "modularml/packages"
+      "turbot/tap"
     ];
 
     brews = [
       # "syncthing"
       "teller"
+      "kcat"
       "llm"
       "ansible"
       "tmctl"
       "logcli"
       "mirrord"
+      "modular"
       "eksctl"
       "kubeshark"
       "k8sgpt"
       "pipx"
+      "steampipe"
+      "powerpipe"
+      "flowpipe"
     ];
 
     casks = [
