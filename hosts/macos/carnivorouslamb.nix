@@ -59,7 +59,8 @@
       "jetbrains-toolbox"
       "keepassxc"
       "lm-studio" # hash mismatch
-      "logi-options-plus"
+      #"logi-options-plus"
+      "logi-options+"
       "logseq"
       "ollama"
       "orbstack"
